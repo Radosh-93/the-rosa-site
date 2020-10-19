@@ -16,24 +16,50 @@ header {
 			justify-content: center;
 
 			.sidebar {
-				&::before {
-					content: '';
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100vw;
-					height: 100vh;
-					background-color: rgba(0,0,0,.8);
-					z-index: 1000;
-					opacity: 0;
-
-				}
 				.menu-toggle {
 					position: absolute;
 					top: 50%;
-					right: 2.5rem;
+					right: 3vw;
 					transform: translateY(-50%);
 					z-index: 1500;
+				}
+				.sidebar-menu {
+					&.menu-enter {
+						.btn_mask {
+							opacity: 0;
+						}
+						.nav-list {
+							transform: translateX(-100%);
+						}
+					}
+					&.menu-enter-active {
+						.btn_mask {
+							opacity: 1;
+							transition: opacity 700ms;
+						}
+						.nav-list {
+							transform: translateX(0);
+							transition: transform .5s;
+						}
+					}
+					&.menu-exit {
+						.btn_mask {
+							opacity: 1;
+						}
+						.nav-list {
+							transform: translateX(0);
+						}
+					}
+					&.menu-exit-active {
+						.btn_mask {
+							opacity: 0;
+							transition: opacity 700ms;
+						}
+						.nav-list {
+							transform: translateX(-100%);
+							transition: transform .5s;
+						}
+					}
 				}
 				.nav-list{
 					list-style: none;
