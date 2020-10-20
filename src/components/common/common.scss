@@ -1,3 +1,5 @@
+@import "./../../assets/variables";
+
 .btn_mask {
 	width: 100vw;;
 	height: 100vh;
@@ -9,4 +11,26 @@
 	visibility: visible;
 	transition: opacity .9s ease;
 	cursor: pointer;
+}
+
+//Headline
+.sup-headline {
+	font-size: 8.5rem;
+	font-family: $secondary-font;
+	color: $secondary-font-color;
+	font-weight: 100;
+	line-height: 0.4;
+	letter-spacing: 2px;
+	&:first-letter {
+		text-transform: uppercase;
+		font-size: 10.3rem;
+	}
+}
+.headline {
+	font-size: 3.7rem;
+	font-family: $main-font;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: .5rem;
+	margin-right: -.5rem;
 }

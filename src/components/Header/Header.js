@@ -25,7 +25,6 @@ export const Header = () => {
 						<NavList />
 					</nav>
 				</Breakpoint>
-
 			</div>
 		</header >
 	)
