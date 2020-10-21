@@ -8,13 +8,6 @@
 	cursor: default;
 }
 
-.btn {
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-right: -2px;
-}
-
 .hero {
 	width: 100%;
 	height: 100vh;
@@ -68,20 +61,6 @@
 				margin-bottom: 1.2rem;
 				letter-spacing: 3px;
 				margin-right: -3px;
-			}
-
-			.cta-btn {
-				font-size: 1.1rem;
-				background-color: #fff;
-				padding: .9rem 1.8rem;
-				color: $body-font-color;
-				border-radius: .4rem;
-				transition: all .5s;
-
-				&:hover, &:focus {
-					color: #fff;
-					background-color: $secondary-font-color;
-				}
 			}
 
 		}

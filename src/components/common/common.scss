@@ -3,7 +3,7 @@
 .btn_mask {
 	width: 100vw;;
 	height: 100vh;
-	background-color: rgba(0,0,0,.6);
+	background-color: rgba(0, 0, 0, .6);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -21,11 +21,13 @@
 	font-weight: 100;
 	line-height: 0.4;
 	letter-spacing: 2px;
+
 	&:first-letter {
 		text-transform: uppercase;
 		font-size: 10.3rem;
 	}
 }
+
 .headline {
 	font-size: 3.7rem;
 	font-family: $main-font;
@@ -34,3 +36,74 @@
 	letter-spacing: .5rem;
 	margin-right: -.5rem;
 }
+
+//headline ends
+
+
+button.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-right: -2px;
+	//normalize
+	font-size: 100%;
+	font-family: inherit;
+	border: 0;
+	background: none;
+	overflow: visible;
+	-webkit-appearance: button;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.body-btn {
+		font-size: 1.5rem;
+		color: $secondary-font-color;
+		position: relative;
+		transition: color .5s;
+
+		&:hover, &:focus {
+			color: $main-font-color-dark;
+
+			&::before {
+				background-color: $main-font-color-dark;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -3px;
+			width: 100%;
+			height: 2px;
+			background-color: $secondary-font-color;
+			transition: background-color .5s;
+		}
+	}
+
+	&.cta-btn {
+		font-size: 1.1rem;
+		background-color: #fff;
+		padding: .9rem 1.8rem;
+		color: $body-font-color;
+		border-radius: .4rem;
+		transition: all .5s;
+
+		&:hover, &:focus {
+			color: #fff;
+			background-color: $secondary-font-color;
+		}
+	}
+}
+
+
+//description
+p.description {
+	font-family: inherit;
+	line-height: 1.6;
+	margin-bottom: 2.4rem;
+}
+//description ends
