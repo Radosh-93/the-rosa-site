@@ -6,6 +6,7 @@ import menuGroup3 from '../../assets/images/menu-group-3.jpg';
 import menuGroup4 from '../../assets/images/menu-group-4.jpg';
 import Headline from "../common/Headline";
 import ButtonSection from "../common/ButtonSection";
+import Asterisk from "../common/Asterisk";
 
 const OurMenu = (props) => {
     return (
@@ -22,9 +23,9 @@ const OurMenu = (props) => {
                         <div className="global-headline">
                             <Headline.h2>Discover</Headline.h2>
                             <Headline.h1 view='dark'>Our Menu</Headline.h1>
-                            <div className="asterisk">*</div>
+                            <Asterisk className="asterisk"/>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloremque eaque enim esse
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloremque eaque enim esse
                             excepturi fugiat incidunt ipsam neque nesciunt pariatur placeat, quam quibusdam quis quo
                             repellat ullam ut. Debitis, iste.</p>
                         <ButtonSection className='body-btn'>View the full menu</ButtonSection>

@@ -1,5 +1,72 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "./../../assets/variables";
 
-h1 {
-	color: red;
+footer {
+	padding: 7.9rem 0;
+	background-color: #121212;
+	color: #fff;
+	text-align: center;
+	position: relative;
+
+	.footer-content {
+		//overflow: hidden;
+
+		h4 {
+			font-size: 1.9rem;
+			text-transform: uppercase;
+			font-weight: 100;
+			letter-spacing: 3px;
+			margin-bottom: 3rem;
+		}
+		.asterisk {
+			margin: 0 0 2.4rem 0;
+		}
+		.footer-content-about {
+			margin-bottom: 5.4rem;
+			p {
+				line-height: 2;
+			}
+		}
+		.social-icons {
+			list-style: none;
+			margin-bottom: 5.4rem;
+			display: flex;
+			justify-content: center;
+			li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.icon {
+					font-size: 2rem;
+					margin: .8rem 2rem;
+					opacity: .5;
+					transition: color .5s, fill .5s;
+					fill: white;
+					&:hover, &:focus {
+						fill: $secondary-font-color;
+					}
+				}
+			}
+		}
+		.newsletter-container {
+			.newsletter-form {
+			}
+		}
+	}
+}
+
+.back-to-top {
+	width: 7rem;
+	height: 7rem;
+	background-color: #121212;
+	position: absolute;
+	top: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+
+	.icon {
+		color: white;
+		font-size: 30px;
+	}
+
 }

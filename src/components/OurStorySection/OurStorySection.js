@@ -4,6 +4,7 @@ import ourStory from "./../../assets/images/our-story-1.jpg";
 import Headline from "../common/Headline";
 import ButtonSection from "../common/ButtonSection";
 import {Description} from "../common/Description";
+import Asterisk from "../common/Asterisk";
 
 const OurStorySection = (props) => {
     return (
@@ -14,7 +15,7 @@ const OurStorySection = (props) => {
                         <div className="global-headline">
                             <Headline.h2>Discover</Headline.h2>
                             <Headline.h1 view='dark'>Our Story</Headline.h1>
-                            <div className="asterisk">*</div>
+                            <Asterisk className="asterisk"/>
                         </div>
                         <Description />
                         <ButtonSection className="body-btn">About us</ButtonSection>

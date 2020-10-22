@@ -2,6 +2,7 @@ import React from 'react';
 import './Hero.scss'
 import Headline from "../common/Headline";
 import ButtonSection from "../common/ButtonSection";
+import Asterisk from "../common/Asterisk";
 
 export const Hero = () => {
 	return (
@@ -12,7 +13,7 @@ export const Hero = () => {
 				<div className="headline-description">
 					<div className="separator">
 						<div className="line line-left"></div>
-						<div className="asterisk">*</div>
+						<Asterisk className="asterisk" color='#c59d5f'/>
 						<div className="line line-right"></div>
 					</div>
 					<div className="single-animation">

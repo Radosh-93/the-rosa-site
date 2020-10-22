@@ -5,6 +5,7 @@ import delight2 from "./../../assets/images/delight-group-2.jpg";
 import Headline from "../common/Headline";
 import ButtonSection from "../common/ButtonSection";
 import {Description} from "../common/Description";
+import Asterisk from "../common/Asterisk";
 
 const CulinarySection = (props) => {
     return (
@@ -15,7 +16,7 @@ const CulinarySection = (props) => {
                         <div className="global-headline">
                             <Headline.h2>Culinary</Headline.h2>
                             <Headline.h1 view='dark'>Delight</Headline.h1>
-                            <div className="asterisk">*</div>
+                            <Asterisk className='asterisk'/>
                         </div>
                         <Description />
                         <ButtonSection className="body-btn">Make a reservation</ButtonSection>

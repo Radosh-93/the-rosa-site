@@ -2,10 +2,9 @@
 
 
 .asterisk {
-	font-size: 1.9rem;
-	color: $secondary-font-color;
-	margin: 0.6rem 1.6rem 0 1.6rem;
-	cursor: default;
+	display: inline-flex;
+	align-items: center;
+	margin: 0 1.6rem;
 }
 
 .hero {
@@ -22,6 +21,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 5px;
 
 			.line {
 				width: 100%;
