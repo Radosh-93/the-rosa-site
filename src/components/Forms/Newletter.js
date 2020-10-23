@@ -9,14 +9,29 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 
 const theme = createMuiTheme({
     palette: {
-        type: "dark"
-    }
+        primary: {
+            main: '#a6e22e'
+        },
+        type: "dark",
+        text: {
+            primary: '#e6db74',
+        },
+        error: {
+            main: '#CF06A4',
+
+        },
+        background: {
+            default: '#ffffff',
+            paper: '#ffffff'
+        }
+    },
+
+
 });
 const validate = values => {
     const errors = {};
-    if (!values.email) {
-        errors.email = 'Required!'
-    } else if (!(/^(\w+([.-])?)+\w+@(\w+\.)+[a-z]{2,4}/i.test(values.email))) {
+    if (!(/^(\w+([.-])?)+\w+@(\w+\.)+[a-z]{2,4}/i.test(values.email))
+        && values.email.length > 0) {
         errors.email = 'Not valid email';
     }
     return errors;
@@ -41,7 +56,7 @@ const MyTextField = ({label, variant, ...props}) => {
                        autoComplete='off'
                        helperText={errorText}
                        error={!!errorText}
-                       variant={variant}/>
+                       variant={variant} />
         </ThemeProvider>
     )
 }
