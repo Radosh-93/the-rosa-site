@@ -38,7 +38,7 @@ const Footer = (props) => {
                         </div>
                         <div className="newsletter-container">
                             <h4>Newsletter</h4>
-                            <Newsletter className='newsletter-form' variant="filled"/>
+                            <Newsletter className='newsletter-form'/>
                         </div>
                     </div>
                 </div>
