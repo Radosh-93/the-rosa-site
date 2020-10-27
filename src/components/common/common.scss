@@ -19,8 +19,13 @@
 	font-family: $secondary-font;
 	color: $secondary-font-color;
 	font-weight: 100;
-	line-height: 0.4;
+	//line-height: 0.4;
+	margin-bottom: -5rem;
 	letter-spacing: 2px;
+	/*animation*/
+	/*opacity: 0;
+	animation: fadeUp .5s forwards;
+	animation-delay: .5s;*/
 
 	&:first-letter {
 		text-transform: uppercase;
@@ -35,6 +40,8 @@
 	font-weight: 900;
 	letter-spacing: .5rem;
 	margin-right: -.5rem;
+	//animation: scale .5s forwards;
+
 }
 
 //headline ends
@@ -107,3 +114,20 @@ p.description {
 	margin-bottom: 2.4rem;
 }
 //description ends
+
+//Media queries
+@media screen and (min-width: 900px){
+	.sup-headline {
+		font-size: 10rem;
+		margin-bottom: -6rem;
+
+		&:first-letter {
+			font-size: 12.2rem;
+		}
+	}
+
+	.headline {
+		font-size: 4.7rem;
+		letter-spacing: .8rem;
+	}
+}

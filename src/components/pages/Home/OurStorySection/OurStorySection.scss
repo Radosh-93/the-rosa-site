@@ -1,4 +1,4 @@
-@import "../../assets/variables";
+@import "../../../../assets/variables";
 
 .global-headline {
 	text-align: center;
@@ -19,5 +19,17 @@
 				margin: 2.4rem 0;
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 900px){
+	.restaurant-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 7rem;
+		& > div {
+			align-self: center;
+		}
+
 	}
 }

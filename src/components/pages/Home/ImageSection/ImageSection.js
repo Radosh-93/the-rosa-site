@@ -1,6 +1,6 @@
 import React from 'react'
 import './ImageSection.scss'
-import Headline from "../common/Headline";
+import Headline from "components/common/Headline";
 
 const ImageSection = ({className, titleH1, titleH2}) => {
     return (

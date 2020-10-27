@@ -1,10 +1,10 @@
 import React from 'react';
 import './OurStorySection.scss'
-import ourStory from "./../../assets/images/our-story-1.jpg";
-import Headline from "../common/Headline";
-import ButtonSection from "../common/ButtonSection";
-import {Description} from "../common/Description";
-import Asterisk from "../common/Asterisk";
+import Headline from "components/common/Headline";
+import ButtonSection from "components/common/ButtonSection";
+import Asterisk from "components/common/Asterisk";
+import {Description} from "components/common/Description";
+import ourStory from "assets/images/our-story-1.jpg";
 
 const OurStorySection = (props) => {
     return (

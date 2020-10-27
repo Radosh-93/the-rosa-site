@@ -1,8 +1,8 @@
 import React from 'react';
 import './Hero.scss'
-import Headline from "../common/Headline";
-import ButtonSection from "../common/ButtonSection";
-import Asterisk from "../common/Asterisk";
+import Headline from "components/common/Headline";
+import ButtonSection from "components/common/ButtonSection";
+import Asterisk from "components/common/Asterisk";
 
 export const Hero = () => {
 	return (

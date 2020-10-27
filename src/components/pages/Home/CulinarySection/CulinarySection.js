@@ -1,13 +1,14 @@
 import React from 'react';
 import './CulinarySection.scss'
-import delight1 from "./../../assets/images/delight-group-1.jpg";
-import delight2 from "./../../assets/images/delight-group-2.jpg";
-import Headline from "../common/Headline";
-import ButtonSection from "../common/ButtonSection";
-import {Description} from "../common/Description";
-import Asterisk from "../common/Asterisk";
+import Headline from "components/common/Headline";
+import ButtonSection from "components/common/ButtonSection";
+import {Description} from "components/common/Description";
+import Asterisk from "components/common/Asterisk";
+import delight1 from "assets/images/delight-group-1.jpg";
+import delight2 from  "assets/images/delight-group-2.jpg";
 
 const CulinarySection = (props) => {
+
     return (
         <section className='culinary-delight'>
             <div className="wrapper">

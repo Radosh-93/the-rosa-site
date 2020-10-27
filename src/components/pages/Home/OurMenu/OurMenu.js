@@ -1,12 +1,12 @@
 import React from 'react';
 import './OurMenu.scss'
-import menuGroup1 from '../../assets/images/menu-group-1.jpg';
-import menuGroup2 from '../../assets/images/menu-group-2.jpg';
-import menuGroup3 from '../../assets/images/menu-group-3.jpg';
-import menuGroup4 from '../../assets/images/menu-group-4.jpg';
-import Headline from "../common/Headline";
-import ButtonSection from "../common/ButtonSection";
-import Asterisk from "../common/Asterisk";
+import menuGroup1 from 'assets/images/menu-group-1.jpg';
+import menuGroup2 from 'assets/images/menu-group-2.jpg';
+import menuGroup3 from 'assets/images/menu-group-3.jpg';
+import menuGroup4 from 'assets/images/menu-group-4.jpg';
+import Headline from "components/common/Headline";
+import ButtonSection from "components/common/ButtonSection";
+import Asterisk from "components/common/Asterisk";
 
 const OurMenu = (props) => {
     return (

@@ -1,5 +1,24 @@
 @import "./../../assets/variables";
 
+.back-to-top {
+	width: 7rem;
+	height: 7rem;
+	background-color: #121212;
+	position: absolute;
+	top: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+
+	.icon {
+		color: white;
+		font-size: 30px;
+		animation: up 2s infinite;
+	}
+
+
+}
+
 footer {
 	padding: 7.9rem 0;
 	background-color: #121212;
@@ -17,55 +36,66 @@ footer {
 			letter-spacing: 3px;
 			margin-bottom: 3rem;
 		}
+
 		.asterisk {
 			margin: 0 0 2.4rem 0;
 		}
+
 		.footer-content-about {
 			margin-bottom: 5.4rem;
+
 			p {
 				line-height: 2;
 			}
 		}
+
 		.social-icons {
 			list-style: none;
 			margin-bottom: 5.4rem;
 			display: flex;
 			justify-content: center;
+
 			li {
 				display: flex;
 				justify-content: center;
 				align-items: center;
+
 				.icon {
 					font-size: 2rem;
 					margin: .8rem 2rem;
 					opacity: .5;
 					transition: color .5s, fill .5s;
 					fill: white;
+
 					&:hover, &:focus {
 						fill: $secondary-font-color;
 					}
 				}
 			}
 		}
+
 		.newsletter-container {
 			.newsletter-form {
 				width: 100%;
+				max-width: 25rem;
 				position: relative;
-				display: flex;
-				justify-content: center;
+				margin: 0 auto;
+
 				.input-container {
 					width: 100%;
-					max-width: 25rem;
+
 					.newsletter-input {
 						width: 100%;
 						padding: 1.5rem;
 						border-radius: .4rem;
 						border: 2px solid black;
 						font-size: 1.6rem;
+
 						&.error {
 							border: 2px solid red;
 						}
 					}
+
 					.error-message {
 						color: red;
 						font-size: 1.5rem;
@@ -73,6 +103,7 @@ footer {
 						padding-top: .3rem;
 					}
 				}
+
 				.newsletter-btn {
 					color: $main-font-color-dark;
 					font-size: 2rem;
@@ -80,7 +111,8 @@ footer {
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
-					margin-left: 10rem;
+					right: 1.5rem;
+
 					.MuiSvgIcon-root {
 						width: 1.5em;
 						height: 1.5em;
@@ -91,19 +123,33 @@ footer {
 	}
 }
 
-.back-to-top {
-	width: 7rem;
-	height: 7rem;
-	background-color: #121212;
-	position: absolute;
-	top: -3rem;
-	left: 50%;
-	transform: translateX(-50%);
-	border-radius: 50%;
+@media screen and (min-width: 900px) {
+	footer {
+		.footer-content {
+			max-width: 77.5rem;
+			margin: auto;
 
-	.icon {
-		color: white;
-		font-size: 30px;
+			.footer-content-about {
+				max-width: 51.3rem;
+				margin: 0 auto 5.4rem;
+			}
+
+			.footer-content-divider {
+				display: flex;
+				justify-content: space-between;
+
+				.social-media, .newsletter-form {
+					min-width: 29.5rem;
+				}
+
+				.social-icons {
+					li {
+						.icon {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
 	}
-
 }

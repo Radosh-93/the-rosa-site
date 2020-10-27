@@ -6,7 +6,7 @@ export const NavList = () => {
 	return (
 		<ul className='nav-list'>
 			<li className='nav-item'>
-				<NavLink to='/' className="nav-link">
+				<NavLink to='/' exact className="nav-link">
 					Home
 				</NavLink>
 			</li>
@@ -16,7 +16,7 @@ export const NavList = () => {
 				</NavLink>
 			</li>
 			<li className='nav-item'>
-				<NavLink to='/resevations' className="nav-link">Reservations</NavLink>
+				<NavLink to='/reservations' className="nav-link">Reservations</NavLink>
 			</li>
 			<li className='nav-item'>
 				<NavLink to='/new' className="nav-link">New</NavLink>

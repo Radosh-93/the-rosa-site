@@ -10,6 +10,8 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MyTripadvisorIcon from "../common/socIcons/TipadvisorIcon";
 import Newsletter from "../Forms/Newletter";
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css'
 
 
 const Footer = (props) => {
@@ -21,7 +23,9 @@ const Footer = (props) => {
                 </div>
                 <div className="footer-content">
                     <div className="footer-content-about animate-up">
-                        <h4>About Rosa</h4>
+                        <ScrollAnimation animateIn='animate__fadeInLeftBig' offset={500}>
+                            <h4>About Rosa</h4>
+                        </ScrollAnimation>
                         <Asterisk color='#c59d5f' className='asterisk'/>
                         <Description/>
                     </div>
