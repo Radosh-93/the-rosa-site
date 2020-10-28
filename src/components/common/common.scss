@@ -13,15 +13,23 @@
 	cursor: pointer;
 }
 
+.asterisk {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 1.6rem;
+	//animation: spin .5s forwards;
+	//animation-delay: .7s;
+}
 //Headline
 .sup-headline {
 	font-size: 8.5rem;
 	font-family: $secondary-font;
 	color: $secondary-font-color;
 	font-weight: 100;
-	//line-height: 0.4;
-	margin-bottom: -5rem;
+	line-height: 1.1;
+	margin-bottom: -3.7rem;
 	letter-spacing: 2px;
+	z-index: 2;
 	/*animation*/
 	/*opacity: 0;
 	animation: fadeUp .5s forwards;
@@ -40,6 +48,7 @@
 	font-weight: 900;
 	letter-spacing: .5rem;
 	margin-right: -.5rem;
+	z-index: 3;
 	//animation: scale .5s forwards;
 
 }
@@ -119,7 +128,7 @@ p.description {
 @media screen and (min-width: 900px){
 	.sup-headline {
 		font-size: 10rem;
-		margin-bottom: -6rem;
+		margin-bottom: -4.5rem;
 
 		&:first-letter {
 			font-size: 12.2rem;

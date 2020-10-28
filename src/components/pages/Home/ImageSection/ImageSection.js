@@ -6,13 +6,9 @@ const ImageSection = ({className, titleH1, titleH2}) => {
     return (
         <section className={`${className} between`}>
             <div className="wrapper">
-                <div className="global-headline">
-                    <div className="animate-top">
+                <div className="headline-block">
                         <Headline.h2>{titleH2}</Headline.h2>
-                    </div>
-                    <div className="animate-bottom">
                         <Headline.h1>{titleH1}</Headline.h1>
-                    </div>
                 </div>
             </div>
         </section>

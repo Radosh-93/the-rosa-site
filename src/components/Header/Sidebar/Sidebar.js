@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Squash as Hamburger} from 'hamburger-react'
 import {NavLink} from 'react-router-dom';
-import logo from './../../../assets/images/logo-rosa.png';
 import {NavList} from '../NavList/NavList'
 import ButtonMask from "../../common/ButtonMask";
 import {CSSTransition} from "react-transition-group";
+import Logo from "components/Header/Logo";
 
 export const Sidebar = () => {
     let [isToggle, setIsToggle] = useState(false);
@@ -16,13 +16,13 @@ export const Sidebar = () => {
                            color='#ffffff'
                            size={22}/>
             </div>
-            <NavLink to='/'><img src={logo} alt="rosa"/></NavLink>
+            <NavLink to='/'><Logo/></NavLink>
             <CSSTransition in={isToggle}
                            timeout={700}
                            classNames='menu'
                            unmountOnExit>
                 <div className="sidebar-menu">
-                    <NavList/>
+                    <NavList setIsToggle={setIsToggle}/>
                     <ButtonMask isPopUp={isToggle} setPopUp={setIsToggle}/>
                 </div>
             </CSSTransition>

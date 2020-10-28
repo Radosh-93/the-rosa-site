@@ -4,7 +4,7 @@ import {Breakpoint, setDefaultBreakpoints} from 'react-socks';
 import {Sidebar} from './Sidebar/Sidebar';
 import {NavList} from './NavList/NavList';
 import './Header.scss';
-import logo from 'assets/images/logo-rosa.png';
+import Logo from "components/Header/Logo";
 
 setDefaultBreakpoints([
 	{ xsmall: 0 }, // all mobile devices
@@ -26,7 +26,7 @@ export const Header = () => {
                 <Breakpoint medium up>
                     <nav className="nav">
                         <NavLink exact to="/" className='logo'>
-                            <img src={logo} alt="rosa"/>
+                            <Logo/>
                         </NavLink>
                         <NavList/>
                     </nav>

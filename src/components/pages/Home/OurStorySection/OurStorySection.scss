@@ -9,7 +9,7 @@
 	text-align: center;
 
 	.restaurant-description {
-		margin-bottom: 3rem;
+		padding-bottom: 3rem;
 
 		.global-headline {
 			margin-top: 6.9rem;
@@ -19,6 +19,11 @@
 				margin: 2.4rem 0;
 			}
 		}
+	}
+	.restaurant-info-img {
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
 	}
 }
 
