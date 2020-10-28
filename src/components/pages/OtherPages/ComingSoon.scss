@@ -1,13 +1,35 @@
 .coming-soon-block {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: #151515;
 }
-
+.timer-block {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
 // SVG
 .progress-ring {
+	position: relative;
+	.progress-ring-svg {
+		width: 200px;
+	}
 	.progress-ring__circle {
+		//transition: stroke-dashoffset 0.35s;
+		transform: rotate(-90deg);
+		transform-origin: 50% 50%;
+	}
+	.countdown-value {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }

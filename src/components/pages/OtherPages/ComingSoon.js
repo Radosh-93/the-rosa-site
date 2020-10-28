@@ -1,20 +1,29 @@
 import React, {useEffect, useState} from 'react'
 import './ComingSoon.scss'
 
-const ProgressRing = () => {
-    const width = 120;
-    const height = 120;
+const ProgressRing = ({time, offsetCount = 60, children, color = '#000000', opacity = 0.13}) => {
+    const opacityToHex = (opacity * 255).toString(16).slice(0, 2);
+
+    const width = 180;
+    const height = 180;
     const strokeWidth = 4;
     const radius  = (width / 2) - (strokeWidth * 2);
-    const progress = 59;
+    const progress = offsetCount - time;
     const circumference = radius * 2 * Math.PI;
-    const strokeDashoffset = circumference - progress / 60 * circumference;
+    const strokeDashoffset = circumference - progress / offsetCount * circumference;
     return (
-        <div>
-            <svg className='progress-ring'
-                 width={width} height={height}>
+        <div className='progress-ring'>
+            <svg width={width} height={height}>
                 <circle className='progress-ring__circle'
-                        stroke='black'
+                        stroke={color + opacityToHex}
+                        strokeWidth={strokeWidth}
+                        fill='transparent'
+                        r={radius}
+                        cx={width / 2}
+                        cy={width / 2}
+                />
+                <circle className='progress-ring__circle'
+                        stroke={color}
                         strokeWidth={strokeWidth}
                         fill='transparent'
                         r={radius}
@@ -24,6 +33,10 @@ const ProgressRing = () => {
                         style={{strokeDashoffset}}
                 />
             </svg>
+            <p className='countdown-value'>
+                <span className='value'>{time}</span>
+                <span className='time'>{children}</span>
+            </p>
         </div>
     )
 }
@@ -48,15 +61,17 @@ const ComingSoon = (props) => {
 
     return (
         <div className='coming-soon-block'>
-            <h4>The website is under construction</h4>
             <h3>Coming Soon</h3>
-            <p>Subscribe to the newsletter to stay in the latest news</p>
-            <ProgressRing/>
+            <p>We are working hard to launch our new site</p>
             <div className="timer-block">
-                <div className="days">{days}d </div>
-                <div className="hours">{hours}h </div>
-                <div className="mins">{minutes}m </div>
-                <div className="secs">{seconds}s </div>
+                <ProgressRing time={seconds} color='#ff6e00'>secs</ProgressRing>
+                <ProgressRing time={minutes} color='#fd08a8'>mins</ProgressRing>
+                <ProgressRing time={hours}
+                              offsetCount={24}
+                              color='#24cad9'>hours</ProgressRing>
+                <ProgressRing time={days}
+                              offsetCount={100}
+                              color='#bafc00' >days</ProgressRing>
             </div>
         </div>
     );

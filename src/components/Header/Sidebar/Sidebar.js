@@ -1,14 +1,20 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Squash as Hamburger} from 'hamburger-react'
 import {NavLink} from 'react-router-dom';
 import {NavList} from '../NavList/NavList'
 import ButtonMask from "../../common/ButtonMask";
 import {CSSTransition} from "react-transition-group";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Logo from "components/Header/Logo";
 
 export const Sidebar = () => {
     let [isToggle, setIsToggle] = useState(false);
-
+    useEffect(() => {
+        if(isToggle) {
+            disableBodyScroll(document.querySelector('.coming-soon-block'))
+        }
+        return () => {clearAllBodyScrollLocks()}
+    }, [isToggle])
     return (
         <div className="sidebar">
             <div className="menu-toggle">
