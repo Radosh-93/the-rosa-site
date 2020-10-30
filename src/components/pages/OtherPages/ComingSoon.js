@@ -42,27 +42,33 @@ const ProgressRing = ({time, offsetCount = 60, children, color = '#000000', opac
 }
 
 const ComingSoon = (props) => {
-    let [days, setDays] = useState(0);
-    let [hours, setHours] = useState(0);
-    let [minutes, setMinutes] = useState(0);
-    let [seconds, setSeconds] = useState(0);
-    let countDownDate = new Date('Jan 5, 2021 10:00:00').getTime();
+    const countDownDate = new Date('Jan 5, 2021 10:00:00').getTime();
+    let now = new Date().getTime();
+    const initialDays = Math.floor((countDownDate - now) / (1000 * 60 * 60 * 24));
+    const initialHours = Math.floor((countDownDate - now) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    const initialMinutes = Math.floor(((countDownDate - now) % (1000 * 60 * 60)) / (1000 * 60));
+    const initialSeconds = Math.floor(((countDownDate - now) % (1000 * 60)) / 1000);
+    let [days, setDays] = useState(initialDays);
+    let [hours, setHours] = useState(initialHours);
+    let [minutes, setMinutes] = useState(initialMinutes);
+    let [seconds, setSeconds] = useState(initialSeconds);
+
     useEffect(() => {
         let x = setInterval(() => {
             let now = new Date().getTime();
             let distance = countDownDate - now;
-            setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
-            setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            setDays(Math.floor((distance) / (1000 * 60 * 60 * 24)));
+            setHours(Math.floor((distance) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
             setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
             setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
         }, 1000);
-        return () => {clearInterval(x)}
-    }, [])
+        return () => {clearInterval(x)};
+    }, [countDownDate])
 
     return (
         <div className='coming-soon-block'>
-            <h3>Coming Soon</h3>
-            <p>We are working hard to launch our new site</p>
+            <h3 className='title'>Coming Soon</h3>
+            <p className='description'>We are working hard to launch our new site</p>
             <div className="timer-block">
                 <ProgressRing time={seconds} color='#ff6e00'>secs</ProgressRing>
                 <ProgressRing time={minutes} color='#fd08a8'>mins</ProgressRing>

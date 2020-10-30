@@ -4,7 +4,21 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #151515;
+	background-image: linear-gradient(to right,#304352 0%, #d7d2cc 100%);
+	padding: 7rem 0 3rem;
+	.title {
+		font-size: 2rem;
+		color: white;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.description {
+		color: black;
+		border-radius: 5px;
+		padding: 2px 3px;
+		background-color: rgba(255, 255, 255, 0.3);
+		box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	}
 }
 .timer-block {
 	display: flex;
@@ -31,5 +45,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		color: white;
+
+		.value {
+			color: white;
+			font-size: 3rem;
+			line-height: 0.7;
+		}
+		.time {
+			padding-top: 0.3rem;
+		}
 	}
 }
