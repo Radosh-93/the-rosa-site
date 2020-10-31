@@ -12,7 +12,7 @@ function App() {
             <Header/>
             <Route exact path='/' render={() => <Home/>}/>
             <Route exact path='/menu' render={() => <ComingSoon/>}/>
-            <Route exact path='/reservation' render={() => <ComingSoon/>}/>
+            <Route exact path='/reservations' render={() => <ComingSoon/>}/>
             <Route exact path='/new' render={() => <ComingSoon/>}/>
             <Route exact path='/shop' render={() => <ComingSoon/>}/>
             <Route exact path='/contact' render={() => <ComingSoon/>}/>

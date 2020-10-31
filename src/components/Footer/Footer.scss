@@ -120,6 +120,33 @@ footer {
 			}
 		}
 	}
+
+	.modal-body {
+		.modal-container {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 30rem;
+			background-color: white;
+			z-index: 20;
+			color: #515151;
+			padding: 3rem;
+			border-radius: .4rem;
+			.text {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			.description {
+
+			}
+			.close-btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 900px) {

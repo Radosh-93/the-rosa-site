@@ -13,16 +13,9 @@ const validate = values => {
         errors.email = 'Not valid email';
     }
     return errors;
-}
-const initialValues = {email: ''}
-const submitForm = (values, {setSubmitting, resetForm}) => {
-    setSubmitting(true);
-    setTimeout(() => {
-        alert('Submit: ' + values.email);
-        setSubmitting(false);
-        resetForm();
-    }, 1000)
-}
+};
+
+const initialValues = {email: ''};
 
 const MyTextField = ({label, variant, ...props}) => {
     const [field, meta] = useField(props);
@@ -39,12 +32,22 @@ const MyTextField = ({label, variant, ...props}) => {
     )
 }
 
-const Newsletter = ({className, variant}) => {
+const Newsletter = ({className, variant, setIsPopUp}) => {
+
+    const submitForm = (values, {setSubmitting, resetForm}) => {
+        setSubmitting(true);
+        setTimeout(() => {
+            setSubmitting(false);
+            setIsPopUp(true);
+            resetForm();
+        }, 1000)
+    }
+
     return (
         <Formik initialValues={initialValues} validate={validate}
                 onSubmit={submitForm}>
-            {({isSubmitting,}) => (
-                <Form className={className} netlify>
+            {({isSubmitting}) => (
+                <Form className={className} >
                     <MyTextField name='email'
                                  type='input'
                                  label='Email'

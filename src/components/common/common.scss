@@ -3,13 +3,13 @@
 .btn_mask {
 	width: 100vw;;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, .6);
 	position: fixed;
 	top: 0;
 	left: 0;
 	visibility: visible;
 	transition: opacity .9s ease;
 	cursor: pointer;
+	z-index: 10;
 }
 
 .asterisk {

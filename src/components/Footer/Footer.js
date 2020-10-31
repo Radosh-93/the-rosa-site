@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Footer.scss';
 import Asterisk from "../common/Asterisk";
 import {Description} from "../common/Description";
@@ -11,14 +11,19 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MyTripadvisorIcon from "../common/socIcons/TipadvisorIcon";
 import Newsletter from "../Forms/Newletter";
 import {BlockAnimation} from "components/pages/Home/animation/Animations";
+import PopUp from "components/modalWindows/PopUp";
+import {CSSTransition} from "react-transition-group";
 
 
 const Footer = (props) => {
+    const [isPopUp, setIsPopUp] = useState(false);
     return (
         <footer id='footer'>
             <div className="wrapper">
                 <div className="back-to-top">
-                    <IconButton style={{display: "block", width: '100%'}} onClick={() => {window.scrollTo(0, 0)}}><KeyboardArrowUpIcon
+                    <IconButton style={{display: "block", width: '100%'}} onClick={() => {
+                        window.scrollTo(0, 0)
+                    }}><KeyboardArrowUpIcon
                         className='icon'/></IconButton>
                 </div>
                 <div className="footer-content">
@@ -45,12 +50,19 @@ const Footer = (props) => {
                             </div>
                             <div className="newsletter-container">
                                 <h4>Newsletter</h4>
-                                <Newsletter className='newsletter-form'/>
+                                <Newsletter setIsPopUp={setIsPopUp} className='newsletter-form'/>
                             </div>
                         </div>
                     </BlockAnimation>
                 </div>
             </div>
+
+            {isPopUp
+                ? (<PopUp setPopUp={setIsPopUp}>
+                    <h4 className="text">Thank You!</h4>
+                    <p className="description">You've subscribed to our weekly newsletter!</p>
+                </PopUp>)
+                : null}
         </footer>
     );
 };
