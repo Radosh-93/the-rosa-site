@@ -12,7 +12,6 @@ import MyTripadvisorIcon from "../common/socIcons/TipadvisorIcon";
 import Newsletter from "../Forms/Newletter";
 import {BlockAnimation} from "components/pages/Home/animation/Animations";
 import PopUp from "components/modalWindows/PopUp";
-import {CSSTransition} from "react-transition-group";
 
 
 const Footer = (props) => {
