@@ -25,7 +25,6 @@ const MyTextField = ({label, variant, ...props}) => {
             <input type="email"
                    className={`newsletter-input ${errorText ? 'error' : ''}`}
                    placeholder='Your email address...'
-                   autoComplete='off'
                    {...field}/>
             {errorText ? <p className='error-message'>{meta.error}</p> : null}
         </div>

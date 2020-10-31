@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Footer.scss';
 import Asterisk from "../common/Asterisk";
 import {Description} from "../common/Description";
@@ -16,6 +16,9 @@ import PopUp from "components/modalWindows/PopUp";
 
 const Footer = (props) => {
     const [isPopUp, setIsPopUp] = useState(false);
+    useEffect(() => {
+        document.body.style.overflow = isPopUp ? 'hidden' : 'visible'
+    }, [isPopUp])
     return (
         <footer id='footer'>
             <div className="wrapper">
@@ -40,11 +43,21 @@ const Footer = (props) => {
                             <div className="social-media">
                                 <h4>Follow along</h4>
                                 <ul className="social-icons">
-                                    <li><TwitterIcon className='icon'/></li>
-                                    <li><FacebookIcon className='icon'/></li>
-                                    <li><PinterestIcon className='icon'/></li>
-                                    <li><LinkedInIcon className='icon'/></li>
-                                    <li><MyTripadvisorIcon color='#ffffff' className='icon'/></li>
+                                    <li><a href="https://www.twitter.com"
+                                           target='_blank'
+                                           rel="noopener noreferrer"><TwitterIcon className='icon'/></a></li>
+                                    <li><a href="https://www.facebook.com"
+                                           target='_blank'
+                                           rel="noopener noreferrer"><FacebookIcon className='icon'/></a></li>
+                                    <li><a href="https://www.pinterest.com"
+                                           target='_blank'
+                                           rel="noopener noreferrer"><PinterestIcon className='icon'/></a></li>
+                                    <li><a href="https://www.linkedin.com/"
+                                           target='_blank'
+                                           rel="noopener noreferrer"><LinkedInIcon className='icon'/></a></li>
+                                    <li><a href="https://www.tripadvisor.com/"
+                                           target='_blank'
+                                           rel="noopener noreferrer"><MyTripadvisorIcon color='#ffffff' className='icon'/></a></li>
                                 </ul>
                             </div>
                             <div className="newsletter-container">

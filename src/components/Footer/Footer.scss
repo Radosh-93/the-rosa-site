@@ -58,18 +58,20 @@ footer {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-
-				.icon {
-					font-size: 2rem;
+				a {
 					margin: .8rem 2rem;
-					opacity: .5;
-					transition: color .5s, fill .5s;
-					fill: white;
+					.icon {
+						font-size: 2rem;
+						opacity: .5;
+						transition: color .5s, fill .5s;
+						fill: white;
 
-					&:hover, &:focus {
-						fill: $secondary-font-color;
+						&:hover, &:focus {
+							fill: $secondary-font-color;
+						}
 					}
 				}
+
 			}
 		}
 
@@ -127,12 +129,13 @@ footer {
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			max-width: 30rem;
+			width: 80%;
+			max-width: 45rem;
 			background-color: white;
 			z-index: 20;
 			color: #515151;
-			padding: 3rem;
-			border-radius: .4rem;
+			padding: 5rem 4rem;
+			border-radius: .6rem;
 			.text {
 				font-size: 2rem;
 				margin-bottom: 1rem;

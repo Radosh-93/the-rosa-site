@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Squash as Hamburger} from 'hamburger-react'
 import {NavLink} from 'react-router-dom';
 import {NavList} from '../NavList/NavList'
@@ -8,8 +8,10 @@ import Logo from "components/Header/Logo";
 
 export const Sidebar = () => {
     let [isToggle, setIsToggle] = useState(false);
-    let bodyStyling = document.getElementsByTagName('body');
-    bodyStyling[0].style.overflow = isToggle ? 'hidden' : 'visible';
+    useEffect(() => {
+        document.body.style.overflow = isToggle ? 'hidden' : 'visible';
+    }, [isToggle])
+
     return (
         <div className="sidebar">
             <div className="menu-toggle">

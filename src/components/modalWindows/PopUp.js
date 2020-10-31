@@ -8,7 +8,10 @@ const PopUp = ({setPopUp, children}) => {
         <div className='modal-body'>
             <div className="modal-container">
                 {children}
-                <IconButton className='close-btn' onClick={() => {setPopUp(false)}}><HighlightOffIcon/></IconButton>
+                <IconButton className='close-btn'
+                            onClick={() => {setPopUp(false)}}>
+                    <HighlightOffIcon fontSize='large'/>
+                </IconButton>
             </div>
             <ButtonMask setPopUp={setPopUp} bgColor='rgba(0, 0, 0, .8)'/>
         </div>
