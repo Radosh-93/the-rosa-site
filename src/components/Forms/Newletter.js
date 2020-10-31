@@ -44,7 +44,7 @@ const Newsletter = ({className, variant}) => {
         <Formik initialValues={initialValues} validate={validate}
                 onSubmit={submitForm}>
             {({isSubmitting,}) => (
-                <Form className={className}>
+                <Form className={className} netlify>
                     <MyTextField name='email'
                                  type='input'
                                  label='Email'
